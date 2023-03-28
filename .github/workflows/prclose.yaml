@@ -1,0 +1,18 @@
+name: closed
+
+on:
+  pull_request:
+    types: [closed]
+    
+ jobs:
+  make-pr:
+    name: make-pr
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          echo ${{github.sha}}
+          echo ${{github.event.pull_reqeust.head.sha}}
+          ls -l
+     
