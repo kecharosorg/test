@@ -4,7 +4,7 @@ on:
   pull_request:
     types: [closed]
     
- jobs:
+jobs:
   make-pr:
     name: make-pr
     runs-on: ubuntu-latest
